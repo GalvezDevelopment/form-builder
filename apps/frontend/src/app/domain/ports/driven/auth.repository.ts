@@ -3,7 +3,7 @@ import { User, UserAuth } from "../../models/user.interface";
 
 export type Token = string;
 
-export interface RegisterUserRepository {
+export interface AuthRepository {
     register(newUser: User): Promise<ApiResponse<void>>;
     login(user: UserAuth): Promise<ApiResponse<Token>>;
 }
