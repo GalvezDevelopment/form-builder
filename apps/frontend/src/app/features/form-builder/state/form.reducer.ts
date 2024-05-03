@@ -5,6 +5,6 @@ import { createdForm } from './form.actions';
 export const initialState: Partial<FormConfig> = {};
 
 export const reducer = createReducer(
-    initialState,
-    on(createdForm, (state, { form }) => ({ ...form }))
+  initialState,
+  on(createdForm, (state, { form }) => ({ ...form }))
 );

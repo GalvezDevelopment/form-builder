@@ -36,7 +36,7 @@ export class FormMockService implements FormRepository {
 
   async update(form: FormConfig): Promise<ApiResponse<void>> {
     const formToUpdate = await this.get(form.id);
-    
+
     if (formToUpdate.error)
       return Promise.resolve({
         status: formToUpdate.status,
@@ -47,7 +47,7 @@ export class FormMockService implements FormRepository {
     const toUpdate = clone(formToUpdate);
 
     if (toSave === toUpdate) throw new FormError('Form is equal to stored one');
-    
+
     localStorage.setItem(form.id, toSave);
 
     return Promise.resolve({ status: 200 } as ApiResponse<void>);
@@ -55,7 +55,11 @@ export class FormMockService implements FormRepository {
 
   async delete(id: FormConfigId): Promise<ApiResponse> {
     const formToDelete = await this.get(id);
-    if (!formToDelete) return Promise.resolve({ status: 404, error: 'Form to delete does not exist' } as ApiResponse);
+    if (!formToDelete)
+      return Promise.resolve({
+        status: 404,
+        error: 'Form to delete does not exist',
+      } as ApiResponse);
     return Promise.resolve({ status: 200 } as ApiResponse);
   }
 }
