@@ -3,7 +3,9 @@ import { FormRepository } from '../../domain/ports/driven/form.repository';
 import { ApiResponse } from '../../domain/api/api-response.interface';
 import { FormConfig } from '../../domain/models/form-config.interface';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class FormService implements FormRepository {
     create(): Promise<ApiResponse<FormConfig>> {
         throw new Error('Method not implemented.');
