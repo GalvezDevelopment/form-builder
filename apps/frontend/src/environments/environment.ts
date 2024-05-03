@@ -1,3 +1,3 @@
 export const environment = {
-    useMockFormSrv: true
+  useMockFormSrv: true,
 };
