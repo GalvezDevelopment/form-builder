@@ -1,6 +1,6 @@
-export interface ApiResponse<T> {
+export interface ApiResponse<T = void> {
     status: number;
-    message: string;
+    message?: string;
     data: T | T[];
     error?: string;
 }

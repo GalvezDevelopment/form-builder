@@ -4,9 +4,7 @@ import { User } from "../../domain/models/user.interface";
 export interface AppState {
     user: User;
     forms: FormConfig[];
-    formSelected: FormConfig;
+    [FORM_SELECTED_KEY]: FormConfig;
 }
 
-export interface AppStore {
-    form: any[];
-}
+export const FORM_SELECTED_KEY = 'formSelected';

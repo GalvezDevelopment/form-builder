@@ -1,13 +1,12 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { provideStore } from '@ngrx/store';
 import { appRoutes } from './app.routes';
-import { StoreModule, provideStore } from '@ngrx/store';
-import { EffectsModule, provideEffects } from '@ngrx/effects';
+import { reducer as formReducer } from './features/form-builder/state/form.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(appRoutes),
-    importProvidersFrom(StoreModule.forRoot()),
-    importProvidersFrom(EffectsModule.forRoot())
+    provideStore({}),
+    provideRouter(appRoutes)
   ],
 };
