@@ -3,9 +3,9 @@ import { FormSection } from "./form-section.interface";
 
 export interface FormConfig {
     id: FormConfigId;
-    name: string;
+    name?: string;
     userId: string;
     sections: FormSection[];
-    onCreationDate: Date;
+    onCreationDate?: Date;
     onModifiedDate?: Date;
 }

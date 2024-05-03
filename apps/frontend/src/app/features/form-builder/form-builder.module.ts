@@ -1,10 +1,7 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { HomeBuilderComponent } from "./home-builder.component";
 import { RouterModule, Routes } from "@angular/router";
-import { StoreModule } from "@ngrx/store";
-import { reducer } from "./state/form.reducer";
-import { EffectsModule } from "@ngrx/effects";
-import { FormEffects } from "./state/form.effects";
+import { HomeBuilderComponent } from "./home-builder.component";
 
 const routes: Routes = [
     {
@@ -17,9 +14,8 @@ const routes: Routes = [
     declarations: [HomeBuilderComponent],
     providers: [],
     imports: [
-        RouterModule.forChild(routes),
-        StoreModule.forFeature('form', reducer),
-        EffectsModule.forFeature([FormEffects])
+        CommonModule,
+        RouterModule.forChild(routes)
     ],
     exports: [RouterModule]
 })
