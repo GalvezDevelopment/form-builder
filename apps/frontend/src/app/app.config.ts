@@ -5,5 +5,9 @@ import { appRoutes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideStore({}), provideRouter(appRoutes), provideAnimationsAsync('noop')],
+  providers: [
+    provideStore({}),
+    provideRouter(appRoutes),
+    provideAnimationsAsync('noop'),
+  ],
 };
