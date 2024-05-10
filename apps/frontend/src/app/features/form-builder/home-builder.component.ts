@@ -7,8 +7,7 @@ import { selectFormConfig } from './state/form.selectors';
 
 @Component({
   selector: 'designer-home',
-  template: `
-  `,
+  template: ``,
 })
 export class HomeBuilderComponent implements OnInit {
   formCreated$: Observable<string>;

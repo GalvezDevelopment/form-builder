@@ -1,34 +1,34 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  font-family: Manrope;
+  background-color: white;
+  padding: var(--fb-size-5) var(--fb-size-12);
+
+  &__logo {
     display: flex;
-    justify-content: space-between;
-    font-family: Manrope;
-    background-color: white;
-    padding: var(--fb-size-5) var(--fb-size-12);
+    align-items: stretch;
+    cursor: pointer;
 
-    &__logo {
-        display: flex;
-        align-items: stretch;
-        cursor: pointer;
-
-        &-text {
-            align-content: center;
-        }
-
-        mat-icon {
-            width: var(--fb-size-7);
-            height: var(--fb-size-7);
-            font-size: var(--fb-size-7);
-        }
+    &-text {
+      align-content: center;
     }
 
-    &__vector {
-        align-content: center;
-        margin-right: var(--fb-size-3);
+    mat-icon {
+      width: var(--fb-size-7);
+      height: var(--fb-size-7);
+      font-size: var(--fb-size-7);
     }
+  }
 
-    &__right {
-        button:first-child {
-            margin-right: var(--fb-size-4);
-        }
+  &__vector {
+    align-content: center;
+    margin-right: var(--fb-size-3);
+  }
+
+  &__right {
+    button:first-child {
+      margin-right: var(--fb-size-4);
     }
+  }
 }
