@@ -69,3 +69,17 @@ h2 {
 h3 {
   font-size: var(--fb-size-7);
 }
+
+@media (width < 536px) {
+  h1 {
+    font-size: var(--fb-size-9);
+    font-weight: 700;
+  }
+  h2 {
+    font-size: var(--fb-size-7);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: var(--fb-size-5);
+  }
+}
