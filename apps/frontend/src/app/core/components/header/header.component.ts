@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { SharedModule } from '../../../shared/shared.module';
 
@@ -11,6 +12,8 @@ import { SharedModule } from '../../../shared/shared.module';
 })
 export class HeaderComponent {
   private _router: Router = inject(Router);
+
+  @ViewChild(MatMenuTrigger) private _menu!: MatMenuTrigger;
 
   public redirectHome(): void {
     this._router.navigate(['/']);
