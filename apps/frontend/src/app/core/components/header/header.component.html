@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [ngClass]="{ 'header-xs': isXSmall$ | async }">
   <section class="header__logo">
     <span class="header__vector" (click)="redirectHome()">
       <mat-icon color="accent">extension</mat-icon>
@@ -6,19 +6,18 @@
     <h3 class="header__logo-text">FORMBUILDER</h3>
   </section>
   <section class="header__icons">
+    @if (isXSmall$ | async) {
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    } @else {
     <button mat-icon-button>
       <mat-icon>person</mat-icon>
     </button>
     <button mat-icon-button>
       <mat-icon>logout</mat-icon>
     </button>
-    <button
-      class="header__icons--xs"
-      mat-icon-button
-      [matMenuTriggerFor]="menu"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
+    }
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
         <mat-icon>person</mat-icon>

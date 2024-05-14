@@ -1,12 +1,12 @@
 import { Route } from '@angular/router';
 import { provideEffects } from '@ngrx/effects';
+import { provideState } from '@ngrx/store';
 import { environment } from '../environments/environment';
 import { FormService } from './core/adapters/form.service';
 import { FormMockService } from './core/adapters/form.service.mock';
-import { FormEffects } from './features/form-builder/state/form.effects';
-import { provideState } from '@ngrx/store';
-import { reducer as formReducer } from './features/form-builder/state/form.reducer';
 import { FORM_SELECTED_KEY } from './core/state/app-state.interface';
+import { FormEffects } from './features/form-builder/state/form.effects';
+import { reducer as formReducer } from './features/form-builder/state/form.reducer';
 
 export const appRoutes: Route[] = [
   {

@@ -70,7 +70,7 @@ h3 {
   font-size: var(--fb-size-7);
 }
 
-@media (width < 536px) {
+.app-xs {
   h1 {
     font-size: var(--fb-size-9);
     font-weight: 700;
