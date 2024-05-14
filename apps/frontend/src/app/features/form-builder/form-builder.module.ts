@@ -14,7 +14,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [HomeBuilderComponent],
   providers: [],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  imports: [RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule],
 })
 export class FormBuilder {}
