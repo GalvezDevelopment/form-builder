@@ -1,0 +1,15 @@
+$base-spacing: 4px;
+
+@mixin sizes() {
+  @for $i from 1 through 12 {
+    --fb-size-#{$i}: #{$base-spacing * $i};
+  }
+}
+
+@mixin titles() {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin: 0;
+    }
+  }
+}
