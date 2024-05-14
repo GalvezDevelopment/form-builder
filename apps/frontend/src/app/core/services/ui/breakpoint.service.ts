@@ -25,7 +25,7 @@ export class BreakpointService {
     Breakpoints.Large,
   ];
 
-  constructor() {
+  public startListening(): void {
     this._breakpoint$
       .observe(this._mediaQueries)
       .subscribe((sizes) => this.setScreenSize(sizes.breakpoints));

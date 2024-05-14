@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
       provide: APP_INITIALIZER,
       multi: true,
       useFactory: function (srv: BreakpointService) {
-        return () => {};
+        return () => srv.startListening();
       },
       deps: [BreakpointService],
     },
