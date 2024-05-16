@@ -2,15 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { HeaderComponent } from './core/components/header/header.component';
-import { AppState } from './core/state/app-state.interface';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { Observable } from 'rxjs';
+import { HeaderComponent } from './core/components/header/header.component';
 import { selectXSmall } from './core/services/ui/breakpoint.selectors';
+import { AppState } from './core/state/app-state.interface';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, NxWelcomeComponent, RouterModule, HeaderComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
