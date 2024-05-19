@@ -4,8 +4,12 @@
 // Plus imports for other components in your app.
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import '../../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../../node_modules/bootstrap/scss/bootstrap-utilities';
 @import 'theme/formbuilder-theme';
 @import 'theme/grid-system';
+@import 'theme/variables';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -69,6 +73,12 @@ h2 {
 h3 {
   font-size: var(--fb-size-7);
 }
+h4 {
+  font-size: var(--fb-size-6);
+}
+h5 {
+  font-size: var(--fb-size-5);
+}
 
 .app-xs {
   h1 {
@@ -82,4 +92,14 @@ h3 {
   h3 {
     font-size: var(--fb-size-5);
   }
+  h4 {
+    font-size: var(--fb-size-4);
+  }
+  h5 {
+    font-size: var(--fb-size-3);
+  }
+}
+
+mat-form-field {
+  width: 100%;
 }

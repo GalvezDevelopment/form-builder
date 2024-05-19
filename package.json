@@ -23,6 +23,7 @@
     "@ngrx/store-devtools": "^17.2.0",
     "@nx/angular": "18.3.4",
     "axios": "^1.6.0",
+    "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reflect-metadata": "^0.1.13",
