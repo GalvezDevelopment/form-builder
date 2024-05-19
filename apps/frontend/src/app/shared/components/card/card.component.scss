@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--card-bg);
+  padding: var(--card-padding);
+
+  .card {
+    &__body {
+      flex-grow: 1;
+      padding: var(--card-body-padding);
+    }
+  }
+}

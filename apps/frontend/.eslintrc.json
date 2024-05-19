@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": ["app", "designer", "form"],
+            "prefix": ["app", "designer", "form", "builder"],
             "style": "kebab-case"
           }
         ]

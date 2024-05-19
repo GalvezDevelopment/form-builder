@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeBuilderComponent } from './home-builder.component';
 import { SharedModule } from '../../shared/shared.module';
+import { CreationFormStepperComponent } from './components/stepper/creation-stepper.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeBuilderComponent],
+  declarations: [HomeBuilderComponent, CreationFormStepperComponent],
   providers: [],
   imports: [RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule],

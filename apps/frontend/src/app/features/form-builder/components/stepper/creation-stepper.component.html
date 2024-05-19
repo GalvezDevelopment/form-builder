@@ -1,0 +1,44 @@
+<div class="row justify-content-md-center">
+  <div class="col col-md-8 col-lg-6">
+    <builder-card-actions
+      alignment="space-between"
+      title="Set the name of your form"
+      [bodyTemplate]="body"
+      [buttonsConfig]="buttonsConfig()"
+    >
+      <ng-template #body>
+        <ng-container [ngSwitch]="current()">
+          <ng-container *ngSwitchCase="1">
+            <mat-form-field>
+              <input
+                type="text"
+                matInput
+                [(ngModel)]="formName"
+                required
+                minlength="5"
+                maxlength="100"
+              />
+            </mat-form-field>
+          </ng-container>
+
+          <ng-container *ngSwitchDefault>
+            <div
+              class="d-flex flex-column h-100 align-items-center justify-content-md-center"
+            >
+              <picture>
+                <img
+                  src="../../../../../assets/sunglasses_smile.svg"
+                  alt="Create new form"
+                  class="mb-2"
+                />
+              </picture>
+              <h5 class="text-center">
+                Start designing your first awesome form
+              </h5>
+            </div>
+          </ng-container>
+        </ng-container>
+      </ng-template>
+    </builder-card-actions>
+  </div>
+</div>
