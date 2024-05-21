@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { CardModule } from './components/card/card.module';
+import { ListItemModule } from './components/list-item/list-item.module';
 
 const materialComponents = [
   MatButtonModule,
@@ -24,6 +25,7 @@ const materialComponents = [
     ReactiveFormsModule,
     FormsModule,
     CardModule,
+    ListItemModule,
     ...materialComponents,
   ],
 })

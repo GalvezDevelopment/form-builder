@@ -1,0 +1,28 @@
+@import '../../../../../../theme//formbuilder-theme';
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: var(--fb-size-13);
+  min-height: var(--fb-size-13);
+  padding: var(--fb-size-2) var(--fb-size-3);
+
+  &:hover:not:in(button) {
+    background-color: map-get($map: $formbuilder_theme, $key: 500);
+  }
+
+  .list {
+    &__title {
+      align-items: center;
+    }
+
+    &__actions {
+      padding: var(--fb-size-1) inherit;
+
+      & button {
+        margin-left: var(--fb-size-2);
+      }
+    }
+  }
+}
