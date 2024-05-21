@@ -18,7 +18,7 @@ describe('ItemComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ListItemWrapperComponent],
-      imports: [ListItemModule]
+      imports: [ListItemModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ListItemWrapperComponent);
