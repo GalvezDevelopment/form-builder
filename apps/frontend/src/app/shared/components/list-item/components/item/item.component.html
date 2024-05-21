@@ -1,0 +1,8 @@
+<div class="list__title d-flex align-items-center">{{ config().title }}</div>
+<div class="list__actions">
+  <ng-container *ngFor="let btn of config().actions">
+    <button mat-flat-button color="primary" (click)="emitEvent(btn.type)">
+      {{ btn.text }}
+    </button>
+  </ng-container>
+</div>
